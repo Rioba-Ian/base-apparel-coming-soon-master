@@ -21,10 +21,24 @@ html {
   height: 100%;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   font-family: "Josefin Sans", serif;
   height: 100%;
   background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+main {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 60% 2fr;
 }
 
 .attribution {
