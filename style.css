@@ -34,11 +34,41 @@ body {
 main {
   width: min(100%, 1440px);
   margin: 0 auto;
+  /* background-color: lightblue; */
 }
 
 .main-container {
   display: grid;
   grid-template-columns: 60% 2fr;
+}
+
+.main-container section:nth-child(1) {
+  width: 70%;
+  margin: 2% auto 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.main-section-content--title {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.6rem;
+  color: var(--dark-greyish-red);
+}
+
+.main-section-content--title span {
+  color: var(--desaturated-red);
+  font-weight: 300;
+}
+
+.main-section-content p {
+  color: var(--desaturated-red);
+  font-weight: 600;
+  line-height: 150%;
 }
 
 .attribution {
