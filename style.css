@@ -34,7 +34,6 @@ body {
 main {
   width: min(100%, 1440px);
   margin: 0 auto;
-  /* background-color: lightblue; */
 }
 
 .main-container {
@@ -78,4 +77,81 @@ main {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.main-section-content input[type="email"] {
+  padding: 0.75em 2.4em;
+  width: 70%;
+  margin: 2em 0em 0;
+  border-radius: 30px;
+  border: 2px solid #e5d9dc;
+  background-color: transparent;
+}
+
+.email-input {
+  position: relative;
+}
+
+button {
+  border: none;
+}
+
+.email-input button {
+  position: absolute;
+  bottom: -5%;
+  right: 25%;
+  padding: 1.125em 2.5em;
+  border-radius: 30px;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.email-input input::placeholder {
+  color: var(--desaturated-red);
+}
+
+.email-input input:focus {
+  outline: none;
+}
+
+/* Only show invalid ring while not focused */
+.email-input input:not(:focus):not(:placeholder-shown):invalid {
+  border-color: var(--soft-red);
+}
+
+.email-input input:not(:focus):not(:placeholder-shown):invalid .error-icon {
+  display: block;
+}
+
+.error-icon {
+  position: absolute;
+  bottom: 10%;
+  left: 56%;
+  display: none;
+}
+
+@media (min-width: 800px) {
+  header {
+    display: none;
+  }
+}
+
+@media (max-width: 799px) {
+  .header-section-img {
+    display: none;
+  }
+
+  header {
+    display: block;
+  }
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr auto;
+  }
 }
