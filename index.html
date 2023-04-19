@@ -15,52 +15,97 @@
 </head>
 
 <body>
-  <header>
-    <div class="header-section-img">
-      <img src="./images/logo.svg" alt="">
-    </div>
-  </header>
+  <div class="container-app">
 
-  <main class="main-container">
-    <section>
+    <div class="header-mobile">
       <div class="header-section-img">
         <img src="./images/logo.svg" alt="">
       </div>
-      <div class="main-section-content">
 
-        <h1 class="main-section-content--title"> <span>We're</span> coming soon</h1>
+      <section>
+        <picture>
+          <source media="(max-width: 799px)" srcset="./images/hero-mobile.jpg" />
+          <source media="(min-width: 800px)" srcset="./images/hero-desktop.jpg" />
+          <img src="./images/hero-desktop.jpg" alt="">
+        </picture>
+      </section>
+
+      <div class="header-content">
+        <h1 class="header-content--title"> <span>We're</span> coming soon</h1>
         <p>Hello fellow shoppers! We're currently building our new fashion store.
           Add your email below to stay up-to-date with announcements and our launch deals.
         </p>
+
         <form class="email-input">
-          <input type="email" required placeholder="Email Address" name="emailaddress" id="email-address">
-          <button type="submit" for="emailaddress"><img src="./images/icon-arrow.svg" alt=""></button>
-          
-          <span>
-            <img class="error-icon" src="./images/icon-error.svg" alt="error icon">
-          </span>
+          <div>
+
+            <input type="email" required placeholder="Email Address" name="emailaddress" id="email-address">
+            <button type="submit" for="emailaddress"><img src="./images/icon-arrow.svg" alt=""></button>
+            <span class="error">
+              <img class="error-icon" src="./images/icon-error.svg" alt="error icon">
+            </span>
+          </div>
+
         </form>
       </div>
+    </div>
 
-    </section>
+    <div class="main-desktop">
+      
+    <header>
+      <div class="header-section-img-desktop">
+        <img src="./images/logo.svg" alt="">
+      </div>
 
-    <section>
+      <div class="header-content">
+        <h1 class="header-content--title"> <span>We're</span> coming soon</h1>
+        <p>Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+      </div>
+
+      <section class="section-form-desktop">
+        <div class="main-section-content">
+          <form class="email-input">
+            <div>
+
+              <input type="email" required placeholder="Email Address" name="emailaddress" id="email-address">
+              <button type="submit" for="emailaddress"><img src="./images/icon-arrow.svg" alt=""></button>
+              
+              <span>
+                <img class="error-icon" src="./images/icon-error.svg" alt="error icon">
+              </span>
+            </form>
+          </div>
+        </div>
+  
+      </section>
+    </header>
+
+    
+
+    
+    <section class="img-section-desktop">
       <picture>
         <source media="(max-width: 799px)" srcset="./images/hero-mobile.jpg" />
         <source media="(min-width: 800px)" srcset="./images/hero-desktop.jpg" />
         <img src="./images/hero-desktop.jpg" alt="">
       </picture>
     </section>
-  </main>
+  </div>
 
 
 
-  <!-- <footer>
+
+    <!-- <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer> -->
+
+  </div>
+
 
   <script src="./app.js"></script>
 </body>
