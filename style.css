@@ -165,7 +165,7 @@ p {
 }
 
 .img-section-desktop {
-  flex: 2 0 610px;
+  flex: 2 0 auto;
 }
 
 .header-section-img-desktop {
