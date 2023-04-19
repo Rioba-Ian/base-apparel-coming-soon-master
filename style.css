@@ -25,6 +25,11 @@ img {
   max-width: 100%;
 }
 
+a,
+button {
+  cursor: pointer;
+}
+
 body {
   font-family: "Josefin Sans", serif;
   height: 100%;
@@ -68,7 +73,7 @@ p {
   align-items: center;
 }
 
-.header-mobile form > div {
+.email-input > div {
   margin: 0 auto;
   margin-top: 2em;
 
@@ -79,14 +84,14 @@ p {
   justify-content: center;
 }
 
-.header-mobile .error {
+.email-input .error {
   display: none;
 
   position: absolute;
   right: 25%;
 }
 
-.header-mobile form > div > button {
+.email-input div > button {
   padding: 0.8em 1.6rem;
   margin-left: -2rem;
   outline: none;
@@ -96,7 +101,7 @@ p {
   background-color: var(--desaturated-red);
 }
 
-.header-mobile input {
+.email-input input {
   padding: 0.8em;
   border-radius: 2rem;
   border: 1px solid var(--dark-greyish-red);
@@ -123,6 +128,7 @@ p {
   p {
     text-align: center;
   }
+  .main-desktop *,
   .img-section-desktop,
   .header-section-img-desktop,
   .section-form-desktop {
@@ -149,8 +155,51 @@ p {
 
 .main-desktop header {
   flex-shrink: 15;
+
+  padding-left: 15%;
+  padding-right: 10%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 
 .img-section-desktop {
-  flex: 2 0 inherit;
+  flex: 2 0 610px;
+}
+
+.header-section-img-desktop {
+  padding: 8vmin 0;
+}
+
+.header-content--title {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+}
+
+.header-content p {
+  margin: 0.5em 0;
+}
+
+@media (min-width: 800px) {
+  .email-input .error-icon {
+    display: none;
+
+    position: absolute;
+    top: 25%;
+    right: 22%;
+  }
+
+  .email-input input {
+    width: 100%;
+    padding: 1em;
+  }
+
+  .email-input div > button {
+    padding: 1.125em 2rem;
+    margin-left: -2rem;
+    border-radius: 2rem;
+
+    background-color: var(--desaturated-red);
+  }
 }
