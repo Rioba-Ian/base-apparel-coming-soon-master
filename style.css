@@ -84,11 +84,15 @@ p {
   justify-content: center;
 }
 
-.email-input .error {
-  display: none;
+.error {
+  opacity: 0;
 
   position: absolute;
   right: 25%;
+}
+
+.active-error {
+  opacity: 1;
 }
 
 .email-input div > button {
@@ -182,7 +186,7 @@ p {
 }
 
 @media (min-width: 800px) {
-  .email-input .error-icon {
+  .error-icon {
     display: none;
 
     position: absolute;
@@ -202,4 +206,18 @@ p {
 
     background-color: var(--desaturated-red);
   }
+}
+
+/* Only show invalid ring while not focused */
+input:not(:focus):not(:placeholder-shown):invalid {
+  border: 2px solid var(--soft-red);
+}
+input:not(:focus):not(:placeholder-shown):invalid ~ .error {
+  opacity: 1;
+}
+
+/* Only show valid ring while not focused and if a value is entered */
+/* :empty won't work here as that targets elements that have no childeren. Therefore we abuse :placeholder-shown */
+input:not(:focus):not(:placeholder-shown):valid {
+  border-color: var(--color-valid);
 }
